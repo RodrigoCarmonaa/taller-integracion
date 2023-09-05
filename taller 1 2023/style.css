@@ -1,24 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-
 }
 
-body{
+body {
     text-align: center;
     font-family: sans-serif;
+    background: #1f1d1d;
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.head{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,12 +20,10 @@ body{
     z-index: 100;
 }
 
-.navbar{
-    display: flex;
-    margin-right: 10px;
-}
 
-.logo{
+/* Logo */
+
+.logo {
     margin-left: 30px;
 }
 
@@ -45,7 +34,15 @@ body{
     font-size: 20px;
 }
 
-.navbar a {
+
+/* Menu */
+
+.menu {
+    display: flex;
+    margin-right: 10px;
+}
+
+.menu a {
     display: block;
     padding: 23px 20px;
     color: #fff;
@@ -54,42 +51,57 @@ body{
     font-size: 20px;
 }
 
-.navbar a:hover{
+.menu a:hover {
     background: #3f3f3f;
-
 }
 
-.header{
+
+/* Inicio */
+
+.inicio {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.header{
+    flex-direction: column;
     height: 60vh !important;
     background: url(imagen2.jpg)no-repeat center;
     background-size: cover;
 }
 
-.title{
+/* sombra texto inicio */
+
+.inicio h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.inicio p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* estilo de todas las etiquetas h2 */
+
+h2 {
     margin-bottom: 40px;
     font-size: 60px;
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
-
-
 }
 
-p{
+/* estilo de todas las etiquetas p */
+
+p {
     margin-bottom: 40;
     font-size: 18px;
     color: #fff;
     padding: 0 100px;
-  
 }
 
-.btn{
+
+/* Botones */
+
+.btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 40px;
@@ -97,53 +109,68 @@ p{
     color:  #fff;
     text-decoration: none;
     background: #9c27b0;
-
 }
 
 .btn:hover {
     background: none;
 }
 
-.btn-home {
+/* .btn-inicio {
     display: flex;
+} */
 
-}
-
-.btn-home a {
+.btn-inicio a {
     margin: 0  10px;
 } 
 
-.content {
+
+/* */
+
+/* content? */
+/* .content {
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.sau {
+
+/* Agenda Academica, proyecto */
+
+.proyecto {
     padding:  30px;
-    background: #1f1d1d;
 }
 
-.box-container {
+.texto_proyecto {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
 }
 
-.box-container .box {
-    height: 11rem;
+.texto_proyecto div {
+    height: 20rem;
     width: 17rem;
     background: #101010;
-    text-align: center;
     border-radius: 1rem;
-    box-shadow: 0 .3  5rem rgba(0, 0, 0, 5);
-    margin: 2rem;
+    /* box-shadow: 0 0 0.3rem 0.5rem rgba(0, 0, 0, 5); cambiar color */
+    margin: 2rem; /* distancia entre los div */
+    display: flex;
+    align-items: center;  /* texto <h3> centrado */
 }
 
-.box-container .box i{
+.texto_proyecto div h3 {
+    font-size: 20px;
+    color: #9c27b0;
+}
+
+/* <p> */
+/* .texto_proyecto div p {
+    padding: 0 15px;
+    font-size: 16px;
+} */
+
+/* Estilo <i> usar luego */
+/* .texto_proyecto div i {
     height: 30px;
     width:  3rem;
     line-height: 3rem;
@@ -153,36 +180,42 @@ p{
     background: #9c27b0;
     font-size: 2rem;
     margin: 1rem 0 ;
-}
+} */
 
-.box-container .box h3{
-    font-size: 20px;
-    color: #9c27b0;
-}
 
-.box-container .box p{
-    padding: 0 15px;
-    font-size: 16px;
-}
+/* Nosotros */
 
-.about{
+/* .nosotros{
     background: #171717;
-}
+} */
 
-.price{
-    background: url(/3.webp) no repeat center;
+
+/* Agenda, revisar agenda */
+
+/* .agenda {
+    background: url(3.webp) no repeat center; revisar url
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
+} */
+
+
+/* Footer */
+
+footer {
+    background-color: #3f3f3f;
 }
 
-.contact {
+
+/* */
+
+/* .contacto {
     padding-top: 20px;
     background: #171717;
     padding-bottom: 0;
-}
+} */
 
-@media  (max-width: 760px){
+/* @media  (max-width: 760px){
     .title{
         margin-bottom: 0;
         font-size: 40px;
@@ -191,5 +224,4 @@ p{
     .sau{
         height: 120vh;
     }
-}
-
+} */
