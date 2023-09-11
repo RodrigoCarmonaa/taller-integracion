@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agenda Web</title>
+    <link rel="stylesheet" type="text/css" href="agenda.css">
+</head>
+<body>
+    <div class="agenda">
+        <h1>Agenda Web</h1>
+        <div class="event-form">
+            <h2>Añadir evento</h2>
+            <input type="text" id="event" placeholder="Evento">
+            <input type="date" id="date" placeholder="Fecha">
+            <button onclick="agregarEvento()">Agregar</button>
+        </div>
+        <div class="event-list">
+            <h2>Eventos</h2>
+            <ul id="eventos">
+            </ul>
+        </div>
+    </div>
+    <script src="agenda.js"></script>
+</body>
+</html>
