@@ -1,27 +1,46 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     text-align: center;
-    font-family: sans-serif;
-    background: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilos para el encabezado */
+/* Estilos para el encabezado */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 63px;
     background: #278cca;
-    position: fixed;
     width: 100%;
     z-index: 100;
 }
 
 
-/* Logo */
+#page-header {
+    background-color: #278cca;
+    color: #fff;
+    height: 63px;
+    position: fixed;
+    top: 0; /* Establece una posición inicial en la parte superior */
+    width: 100%;
+    transition: top 0.3s; /* Agrega una transición suave para el deslizamiento */
+}
+
+
+.header-hidden {
+    top: -63px; /* Ocultar el encabezado desplazándolo hacia arriba */
+}
+
 
 .logo {
     margin-left: 30px;
@@ -34,12 +53,6 @@ header {
     font-size: 20px;
 }
 
-
-
-.texto_proyecto div:h3 {
-    background-color: #278cca;
-
-}
 .menu {
     display: flex;
     margin-right: 10px;
@@ -58,20 +71,16 @@ header {
     background: #ffffff;
 }
 
-
-/* Inicio */
-
+/* Estilos para la sección "inicio" */
 .inicio {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 60vh !important;
-    background: url(imagen2.jpg)no-repeat center;
+    height: 60vh;
+    background: url(imagen2.jpg) no-repeat center;
     background-size: cover;
 }
-
-/* sombra texto inicio */
 
 .inicio h2 {
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
@@ -81,9 +90,7 @@ header {
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
-
-/* estilo de todas las etiquetas h2 */
-
+/* Estilos para títulos y párrafos */
 h2 {
     margin-bottom: 40px;
     font-size: 60px;
@@ -92,43 +99,33 @@ h2 {
     color: #297077;
 }
 
-/* estilo de todas las etiquetas p */
-
 p {
-    margin-bottom: 40;
+    margin-bottom: 40px;
     font-size: 18px;
     color: #000000;
     padding: 0 100px;
 }
 
-
-/* Botones */
-
+/* Estilos para botones */
 .btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 40px;
-    border:  2px solid #278cca;
-    color:  #fff;
+    border: 2px solid #278cca;
+    color: #fff;
     text-decoration: none;
     background: #278cca;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn:hover {
     background: none;
+    color: #278cca;
 }
 
-/* .btn-inicio {
-    display: flex;
-} */
-
-.btn-inicio a {
-    margin: 0  10px;
-} 
-
-
+/* Estilos para la sección "proyecto" */
 .proyecto {
-    padding:  30px;
+    padding: 30px;
 }
 
 .texto_proyecto {
@@ -141,40 +138,199 @@ p {
     width: 17rem;
     background: #278cca;
     border-radius: 1rem;
-    /* box-shadow: 0 0 0.3rem 0.5rem rgba(0, 0, 0, 5); cambiar color */
-    margin: 2rem; /* distancia entre los div */
+    margin: 2rem;
     display: flex;
-    align-items: center;  /* texto <h3> centrado */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
 }
 
 .texto_proyecto div h3 {
     font-size: 20px;
-    color: #000000;
 }
 
-/* <p> */
 .texto_proyecto div p {
     padding: 0 15px;
     font-size: 16px;
-} 
-
-/* Estilo <i> usar luego */
- .texto_proyecto div i {
-    height: 30px;
-    width:  3rem;
-    line-height: 3rem;
-    text-align: center;
-    border-radius: 50%;
-    color: #fff;
-    background: #9c27b0;
-    font-size: 2rem;
-    margin: 1rem 0 ;
-} 
-
-
-/* Footer */
-
-footer {
-    background-color: #278cca;
 }
 
+/* Estilos para el pie de página */
+.texto_proyecto1 div  {
+    height: 20rem;
+    width: 200rem;
+    background: #d1d3d5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+/*texto del footer */
+.texto_proyecto1 div h3 {
+    font-size: 20px;
+}
+
+.texto_proyecto1 div p {
+    padding: 15px;
+    font-size: 16px;
+}
+
+.texto_proyecto1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para el calendario */
+.calendar {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.calendar h1 {
+    color: #333;
+}
+
+.calendar-header button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+#current-month {
+    font-size: 24px;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+table td {
+    cursor: pointer;
+}
+
+.event-form {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.event-form input[type="date"],
+.event-form input[type="text"],
+.event-form button {
+    margin: 5px;
+    padding: 5px;
+}
+
+.event-list {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+
+
+/* Asistenciaaaaaaaa*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #278cca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1776d3;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.counter button {
+    padding: 5px 10px;
+    background-color: #278cca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.counter button:hover {
+    background-color: #1776d3;
+}
+
+.counter input {
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+}
