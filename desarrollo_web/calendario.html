@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Agenda Académica</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">Logo</a> 
+        </div>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Contacto</a>
+            <a href="#">Crear Agenda</a>
+            <a href="#">Promedio Ponderado</a>
+        </nav>
+    </header>
+    <div class="calendar">
+        <h1>Calendario Mensual</h1>
+        <div class="calendar-header">
+            <button id="prev-month">&lt;</button>
+            <h2 id="current-month">Septiembre 2023</h2>
+            <button id="next-month">&gt;</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Domingo</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- Aquí se generará el calendario -->
+            </tbody>
+        </table>
+        <div class="event-form">
+            <h2>Añadir Evento</h2>
+            <input type="date" id="event-date">
+            <input type="text" id="event-description" placeholder="Descripción">
+            <button id="add-event">Agregar Evento</button>
+        </div>
+        <div class="event-list">
+            <h2>Eventos</h2>
+            <ul id="event-list">
+                <!-- Aquí se mostrarán los eventos -->
+            </ul>
+        </div>
+    </div>
+    <script src="calendario.js"></script>
+    <script src="index.js"></script>
+    <footer>
+        <p>&copy; 2023 Agenda</p>
+    </footer>
+    
+</body>
+</html>
