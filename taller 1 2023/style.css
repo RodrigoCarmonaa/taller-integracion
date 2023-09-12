@@ -77,7 +77,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 60vh;
+    height: 100vh;
     background: url(imagen2.jpg) no-repeat center;
     background-size: cover;
 }
@@ -167,13 +167,9 @@ p {
     color: #000000;
 }
 /*texto del footer */
-.texto_proyecto1 div h3 {
-    font-size: 20px;
-}
-
 .texto_proyecto1 div p {
-    padding: 15px;
-    font-size: 16px;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .texto_proyecto1 {
@@ -262,3 +258,140 @@ li {
     background-color: #f0f0f0;
     border-radius: 5px;
 }
+
+
+
+/* Asistenciaaaaaaaa*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #278cca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1776d3;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.counter button {
+    padding: 5px 10px;
+    background-color: #278cca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.counter button:hover {
+    background-color: #1776d3;
+}
+
+.counter input {
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+
+
+
+/* CSS CALCULADORAAAAAAAAAAAAAAAA*/
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #278cca;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.calculator {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+label,
+input {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #278cca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1776d3;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
