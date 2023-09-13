@@ -1,5 +1,5 @@
 <?php  
-
+    //conexion con nuestra bd
     $conexion= mysqli_connect("localhost", "root", "", "login_register_db");
     
     
