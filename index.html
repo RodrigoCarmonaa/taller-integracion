@@ -1,28 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Horario Escolar</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        td[contenteditable="true"] {
-            background-color: #FFFFCC;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="index.css">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="horario.js"></script>
 </head>
 <body>
-    <h1>Mi Horario Escolar</h1>
-    
-    <table id="horario">
+    <h1>Mi Horario Semanal</h1>
+
+    <table>
         <tr>
             <th>Hora</th>
             <th>Lunes</th>
@@ -33,54 +21,56 @@
         </tr>
         <tr>
             <td>8:00 AM - 9:00 AM</td>
-            <td contenteditable="true">Matemáticas</td>
-            <td contenteditable="true">Ciencias</td>
-            <td contenteditable="true">Historia</td>
-            <td contenteditable="true">Geografía</td>
-            <td contenteditable="true">Arte</td>
+            <td>Matemáticas</td>
+            <td>Historia</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+            <td>Arte</td>
         </tr>
         <tr>
             <td>9:00 AM - 10:00 AM</td>
-            <td contenteditable="true">Ciencias Sociales</td>
-            <td contenteditable="true">Matemáticas</td>
-            <td contenteditable="true">Idiomas</td>
-            <td contenteditable="true">Ciencias</td>
-            <td contenteditable="true">Educación Física</td>
+            <td>Ciencias Sociales</td>
+            <td>Matemáticas</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+            <td>Arte</td>
         </tr>
         <tr>
             <td>10:00 AM - 11:00 AM</td>
-            <td contenteditable="true">Idiomas</td>
-            <td contenteditable="true">Ciencias Sociales</td>
-            <td contenteditable="true">Matemáticas</td>
-            <td contenteditable="true">Literatura</td>
-            <td contenteditable="true">Ciencias</td>
+            <td>Idiomas</td>
+            <td>Deporte</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+            <td>Arte</td>
         </tr>
-        <!-- Puedes agregar más filas para representar las horas y clases restantes -->
+        <tr>
+            <td>11:00 AM - 12:00 PM</td>
+            <td>Idiomas</td>
+            <td>Deporte</td>
+            <td>Matemáticas</td>
+            <td>Ciencias Sociales</td>
+            <td>Arte</td>
+        </tr>
+        <tr>
+            <td>12:00 PM - 1:00 PM</td>
+            <td>Almuerzo</td>
+            <td>Almuerzo</td>
+            <td>Almuerzo</td>
+            <td>Almuerzo</td>
+            <td>Almuerzo</td>
+        </tr>
+        <!-- Puedes agregar más filas para representar más horas del día -->
     </table>
-
-    <script>
-        // Crear un objeto para almacenar los valores originales de las celdas
-        const valoresOriginales = {};
-
-        // Obtener todas las celdas editables
-        const celdasEditables = document.querySelectorAll('td[contenteditable="true"]');
-
-        // Guardar los valores originales en el objeto
-        celdasEditables.forEach((celda) => {
-            valoresOriginales[celda.textContent] = celda.textContent;
-        });
-
-        // Monitorear los cambios y mostrar una alerta con los cambios
-        celdasEditables.forEach((celda) => {
-            celda.addEventListener('input', function () {
-                const valorOriginal = valoresOriginales[this.textContent];
-                const nuevoValor = this.textContent;
-                if (valorOriginal !== nuevoValor) {
-                    alert(`Se ha cambiado "${valorOriginal}" a "${nuevoValor}"`);
-                    valoresOriginales[this.textContent] = this.textContent;
-                }
-            });
-        });
-    </script>
+    <h2>Cambiar una Clase</h2>
+    <form id="cambioClaseForm">
+        <label for="nuevaClase">Nueva Clase:</label>
+        <input type="text" id="nuevaClase" name="nuevaClase" required>
+        <label for="fila">Fila:</label>
+        <input type="number" id="fila" name="fila" min="1" required>
+        <label for="columna">Columna (Día de la Semana):</label>
+        <input type="number" id="columna" name="columna" min="2" max="6" required>
+        <input type="submit" value="Cambiar Clase">
+    </form>
+    
 </body>
 </html>
