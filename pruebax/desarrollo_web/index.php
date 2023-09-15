@@ -1,7 +1,7 @@
 <?php
     session_start();
 //para que el la pagina tenga un inicio de session y no puedan entrar sin iniciar sesion anteriormente
-    if(!isset($_session['usuario'])){
+    if(!isset($_SESSION['usuario'])){
         echo'
             <script>
                 alert("por favor debes iniciar sesion ");
@@ -22,6 +22,7 @@
 
 
 ?>
+
 
 
 <!DOCTYPE html>
