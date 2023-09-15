@@ -1,18 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const horario = document.getElementById('horario');
-    const cambioClaseForm = document.getElementById('cambioClaseForm');
+    const tabla = document.getElementById('tabla');
 
-    cambioClaseForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        
-        const nuevaClase = document.getElementById('nuevaClase').value;
-        const fila = document.getElementById('fila').value - 1; // Restamos 1 para que coincida con el índice de la fila en la tabla
-        const columna = document.getElementById('columna').value;
+    // Hacer que las celdas sean editables al hacer clic en ellas
+    tabla.addEventListener('click', function (e) {
+        if (e.target.tagName === 'TD') {
+            e.target.contentEditable = true;
+            e.target.focus();
+        }
+    });
 
-        const celda = horario.rows[fila].cells[columna];
-        celda.textContent = nuevaClase;
-        
-        // Limpiamos el formulario
-        cambioClaseForm.reset();
+    // Desactivar la edición al presionar Enter o salir de la celda
+    tabla.addEventListener('blur', function (e) {
+        if (e.target.tagName === 'TD') {
+            e.target.contentEditable = false;
+        }
+    });
+
+    // Evitar que se presione Enter en las celdas para evitar crear nuevas filas
+    tabla.addEventListener('keydown', function (e) {
+        if (e.target.tagName === 'TD' && e.key === 'Enter') {
+            e.preventDefault();
+        }
     });
 });
