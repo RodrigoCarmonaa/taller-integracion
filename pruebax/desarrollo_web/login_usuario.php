@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-
+//conexion a base de datos 
     include 'conexion_be.php';
     
 
