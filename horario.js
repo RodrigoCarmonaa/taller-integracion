@@ -1,25 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const tabla = document.getElementById('tabla');
+    const tabla = document.querySelector('table');
 
-    // Hacer que las celdas sean editables al hacer clic en ellas
-    tabla.addEventListener('click', function (e) {
-        if (e.target.tagName === 'TD') {
-            e.target.contentEditable = true;
-            e.target.focus();
-        }
-    });
-
-    // Desactivar la edición al presionar Enter o salir de la celda
-    tabla.addEventListener('blur', function (e) {
-        if (e.target.tagName === 'TD') {
-            e.target.contentEditable = false;
-        }
-    });
-
-    // Evitar que se presione Enter en las celdas para evitar crear nuevas filas
-    tabla.addEventListener('keydown', function (e) {
-        if (e.target.tagName === 'TD' && e.key === 'Enter') {
-            e.preventDefault();
+    tabla.addEventListener('click', function (event) {
+        const cell = event.target;
+        if (cell.tagName === 'TD') {
+            const currentValue = cell.textContent;
+            const newValue = prompt('Ingrese el nuevo valor:', currentValue);
+            
+            if (newValue !== null) {
+                cell.textContent = newValue;
+            }
         }
     });
 });
