@@ -20,6 +20,3 @@ boton.addEventListener("click", function() {
     nuevop.innerText = input;
     editariHTML(divMaterias, input);
 })
-
-
-// Numero de notas
