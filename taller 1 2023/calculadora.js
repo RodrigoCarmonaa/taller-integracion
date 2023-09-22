@@ -2,6 +2,9 @@
 // 2.- Iniciar objetos
 // 3.- Escuchar eventos
 
+
+// Agregar materia
+
 function editariHTML(objeto, texto) {
     objeto.innerHTML = texto;
 }
@@ -17,3 +20,6 @@ boton.addEventListener("click", function() {
     nuevop.innerText = input;
     editariHTML(divMaterias, input);
 })
+
+
+// Numero de notas
