@@ -8,7 +8,7 @@ nNotas.addEventListener('input', function () {
     const numNotas = parseInt(nNotas.value);
 
     // Limpiar el contenedor de notas antes de agregar las nuevas
-    divNotas.innerHTML = '';
+    // divNotas.innerHTML = '';
 
     for (let i = 1; i <= numNotas; i++) {
         const notaText = document.createElement('p');
