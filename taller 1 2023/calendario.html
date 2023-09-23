@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+        
     <title>Agenda Académica</title>
 </head>
 <body>
@@ -11,49 +12,22 @@
         <div class="logo">
             <a href="#">Logo</a> 
         </div>
-        <nav class="menu">
+        <nav class="menu" >
             <a href="index.html">Inicio</a>
             <a href="Asistencia.html">Asistencia</a>
             <a href="calendario.html">Calendario Evaluaciones</a>
-            <a href="#">Crear Agenda</a>
-            <a href="calculadora.html">Notas</a>
+            <a href="#">Horario </a>
+            <a href="#">Promedio Ponderado </a>
         </nav>
     </header>
-    <div class="calendar">
-        <h1>Calendario Mensual</h1>
-        <div class="calendar-header">
-            <button id="prev-month">&lt;</button>
-            <h2 id="current-month">Septiembre 2023</h2>
-            <button id="next-month">&gt;</button>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Domingo</th>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miércoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sábado</th>
-                </tr>
-            </thead>
-            <tbody id="calendar-body">
-                <!-- Aquí se generará el calendario -->
-            </tbody>
-        </table>
-        <div class="event-form">
-            <h2>Añadir Evento</h2>
-            <input type="date" id="event-date">
-            <input type="text" id="event-description" placeholder="Descripción">
-            <button id="add-event">Agregar Evento</button>
-        </div>
-        <div class="event-list">
-            <h2>Eventos</h2>
-            <ul id="event-list">
-                <!-- Aquí se mostrarán los eventos -->
-            </ul>
-        </div>
+    <div id="calendar"></div>
+    <div id="task-input">
+        <input type="text" id="task" placeholder="Agregar tarea">
+        <button id="add-task">Agregar</button>
+    </div>
+    <div id="task-list">
+        <h2>Tareas del día:</h2>
+        <ul id="tasks"></ul>
     </div>
     <script src="calendario.js"></script>
     <script src="index.js"></script>
