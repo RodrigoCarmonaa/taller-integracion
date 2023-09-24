@@ -78,6 +78,7 @@ header {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    height: 100vh;
     background: url(imagen2.jpg) no-repeat center;
     background-size: cover;
 }
