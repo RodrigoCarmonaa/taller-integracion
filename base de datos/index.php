@@ -34,7 +34,7 @@
     <title>Agenda Academica</title>
 </head>
 <body>
-    <header id="page-header">
+    <header>
         <div class="logo">
             <a href="#">Logo</a> 
         </div>
