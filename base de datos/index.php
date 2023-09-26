@@ -43,7 +43,7 @@
             <a href="Asistencia.html">Asistencia</a>
             <a href="calendario.html">Calendario Evaluaciones</a>
             <a href="../taller 1 2023/horario.html">Horario </a>
-            <a href="#">Promedio Ponderado </a>
+            <a href="../taller 1 2023/notas.html">Promedio Ponderado </a>
         </nav>
     </header>
     <div class="inicio">
