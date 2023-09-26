@@ -22,19 +22,11 @@ header {
     background: #278cca;
     width: 100%;
     z-index: 100;
-}
-
-
-#page-header {
-    background-color: #278cca;
     color: #fff;
-    height: 63px;
     position: fixed;
     top: 0; /* Establece una posición inicial en la parte superior */
-    width: 100%;
     transition: top 0.3s; /* Agrega una transición suave para el deslizamiento */
 }
-
 
 .header-hidden {
     top: -63px; /* Ocultar el encabezado desplazándolo hacia arriba */
