@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Función para cargar datos desde un archivo CSV
     function cargarDatosDesdeCSV() {
-        fetch('scraping_cursos (1).csv')
+        fetch('salas.csv')
             .then(response => response.text())
             .then(data => {
                 const filas = data.split('\n');
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(guardarCambiosButton);
 
     // Cargar datos desde un archivo CSV
-    fetch('scraping_cursos (1).csv')
+    fetch('piscrang_cursos (1).csv')
         .then(response => response.text())
         .then(data => {
             // Parsear los datos CSV

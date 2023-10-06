@@ -48,7 +48,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+div {
+  width: 40%;
+}
 /* Estilos para el encabezado */
 /* Estilos para el encabezado */
 header {
