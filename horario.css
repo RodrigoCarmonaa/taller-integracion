@@ -48,11 +48,14 @@ body {
   margin: 0;
   padding: 0;
 }
+/*estilos de la tabla*/
 div {
-  width: 40%;
+width: 40%;
 }
+
+
 /* Estilos para el encabezado */
-/* Estilos para el encabezado */
+
 header {
   display: flex;
   align-items: center;
