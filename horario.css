@@ -50,7 +50,11 @@ body {
 }
 /*estilos de la tabla*/
 div {
-width: 40%;
+width: 55%;
+}
+.tabla{
+  margin: 0 auto;
+  align-items: center;
 }
 
 
