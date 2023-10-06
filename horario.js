@@ -3,18 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const horario = document.getElementById('horario');
 
     // Función para crear filas de horas
-    function crearFilasDeHoras() {
-        for (let i = 8; i <= 20; i++) { // De 8:00 AM a 8:00 PM (13 horas)
-            const fila = horario.insertRow(-1);
-            const hora = fila.insertCell(0);
-            hora.textContent = `${i}:00 - ${i + 1}:00`;
+// Función para crear filas de horas dentro de un intervalo específico
+function crearFilasDeHoras(inicio, fin) {
+    for (let i = inicio; i <= fin; i++) {
+        const fila = horario.insertRow(-1);
+        const hora = fila.insertCell(0);
+        hora.textContent = `${i}:00  - ${i + 1}:00  `;
 
-            for (let j = 1; j <= 5; j++) { // 5 días de la semana (Lunes a Viernes)
-                const celda = fila.insertCell(j);
-                celda.textContent = ''; // Inicialmente, las celdas están vacías
-            }
+        for (let j = 1; j <= 5; j++) { // 5 días de la semana (Lunes a Viernes)
+            const celda = fila.insertCell(j);
+            celda.textContent = ''; // Inicialmente, las celdas están vacías
         }
     }
+}
+
+// Llamar a la función para crear filas de horas dentro de un intervalo específico
+crearFilasDeHoras(8, 19); // Ejemplo: crea filas desde las 8:00 AM hasta las 5:00 PM
 
     // Función para cargar opciones desde un archivo CSV
     function cargarOpcionesDesdeCSV() {
