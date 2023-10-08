@@ -19,7 +19,7 @@ btn_notas.addEventListener('click', function () {
     }
     
     const notaFinal = document.createElement('p');
-    notaFinal.textContent = `Su nota final es: ${suma}`;
+    notaFinal.innerHTML = 'Su nota final es: ${suma}';
     divNotas.appendChild(notaFinal);
     // console.log(`La suma total es: ${suma}`);
 });
@@ -32,7 +32,7 @@ nNotas.addEventListener('input', function () {
 
     for (let i = 1; i <= numNotas; i++) {
         const notaText = document.createElement('p');
-        notaText.textContent = `Nota ${i}`;
+        notaText.innerHTML = `Nota ${i}`;
         divNotas.appendChild(notaText);
 
         const notaInput = document.createElement('input');
