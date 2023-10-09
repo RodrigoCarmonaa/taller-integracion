@@ -19,7 +19,7 @@ btn_notas.addEventListener('click', function () {
     }
     
     const notaFinal = document.createElement('p');
-    notaFinal.innerHTML = 'Su nota final es: ${suma}';
+    notaFinal.innerHTML = 'Su nota final es: ' + suma;
     divNotas.appendChild(notaFinal);
     // console.log(`La suma total es: ${suma}`);
 });
