@@ -58,11 +58,11 @@
                 <form action="registro_usuario.php" method ="POST"  class="formulario__register" id="form">
                     <h2>Regístrarse</h2>
                     <input type="text" placeholder="Nombre completo" name="nombre_completo" id="name">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     <input type="text" placeholder="Correo Electronico" name="correo" id="email">
                     <input type="text" placeholder="Usuario" name="usuario" id="usuario">
                     <input type="password" placeholder="Contraseña" name="contrasena" id="password">
                     <button  type="submit">Regístrarse</button>
-                    <p class ="warnings" id="warnings" ></p>
                 </form>
             </div>
         </div>
@@ -71,5 +71,6 @@
 
     <script src="login.js"></script>
     <script src="formulario.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
