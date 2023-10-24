@@ -1,6 +1,6 @@
 <?php
 //conexion con la base de datos
-$conexion = mysqli_connect("localhost", "rcarmona", "21584530", "A2023_rcarmona");
+$conexion = mysqli_connect("localhost", "root", "", "login_register_db");
 
 //crear variable segun name de los input para enviar inform culto por el metodo POST
 $nombre = $_POST["nombre"];

@@ -44,6 +44,8 @@
             <a href="calendario.html">Calendario Evaluaciones</a>
             <a href="#">Horario </a>
             <a href="#">Promedio Ponderado </a>
+            <a href="comentario.php">valoracion de la pagina </a>
+            <a href="soporte.html">soporte </a>
             <a href="cerrar.php">Cerrar session</a>
         </nav>
     </header>
