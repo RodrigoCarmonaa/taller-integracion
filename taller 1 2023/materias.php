@@ -21,9 +21,9 @@
 
         <label for="nombre">Nombre Materia</label>
         <input type="text" name="nombre">
-        
+<!--         
         <label for="nNotas">Numero de notas</label>
-        <input type="text" name="nNotas">
+        <input type="text" name="nNotas"> -->
         
         <input type="submit" name="enviar" value="Agregar">
     </form>
