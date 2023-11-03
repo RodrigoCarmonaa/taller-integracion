@@ -107,4 +107,51 @@ function rellenarHoraConSeleccion(hora, columnaDia, seleccion) {
             celda.textContent = seleccion;
         }
     }
+    // Función para guardar el horario en un objeto JSON
+function guardarHorarioEnJSON() {
+    const filas = [];
+
+    for (let i = 1; i <= 13; i++) { // Iterar a través de las filas del horario
+        const filaHora = horario.rows[i];
+        const hora = filaHora.cells[0].textContent;
+
+        const celdas = [];
+        for (let j = 1; j <= 5; j++) { // Iterar a través de las celdas de cada fila
+            const celda = filaHora.cells[j];
+            celdas.push(celda.textContent);
+        }
+
+        filas.push({ hora, datos: celdas });
+    }
+
+    const horarioJSON = JSON.stringify(filas);
+
+    // Puedes hacer lo que desees con el objeto JSON, como guardarlo en una variable, en el almacenamiento local o enviarlo al servidor.
+    console.log(horarioJSON);
+}
+
+// Llamar a la función para guardar el horario en JSON
+guardarHorarioEnJSON();
+
+// Objeto JSON a enviar
+const horarioJSON = {
+    // ... tus datos del horario aquí
+};
+
+// URL del servidor PHP
+const url = 'tu_servidor.php';
+
+fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(horarioJSON)
+})
+.then(response => response.text())
+.then(data => {
+    console.log(data); // Respuesta del servidor
+})
+.catch(error => {
+    console.error('Error al enviar el JSON: ', error);
+});
+
+
 });

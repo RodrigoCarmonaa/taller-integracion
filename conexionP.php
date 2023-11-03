@@ -1,30 +1,30 @@
 <?php
-// Conexión a la base de datos (ajusta las credenciales según tu configuración)
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "horarios_db"; // Nombre de la base de datos
+// Conectar a la base de datos
+$servername = "tu_servidor";
+$username = "tu_usuario";
+$password = "tu_contraseña";
+$dbname = "tu_base_de_datos";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    die("Conexión a la base de datos fallida: " . $conn->connect_error);
 }
 
-// Recuperar datos del formulario
-$nombre = $_POST['nombre'];
-$hora_inicio = $_POST['hora_inicio'];
-$hora_fin = $_POST['hora_fin'];
-$dia_semana = $_POST['dia_semana'];
+// Recibir el objeto JSON del cliente
+$json = file_get_contents('php://input');
+$data = json_decode($json, true);
 
-// Insertar datos en la base de datos
-$sql = "INSERT INTO horarios (nombre, hora_inicio, hora_fin, dia_semana)
-        VALUES ('$nombre', '$hora_inicio', '$hora_fin', '$dia_semana')";
+// Procesar e insertar los datos en la base de datos
+foreach ($data as $fila) {
+    $hora = $fila["hora"];
+    $datos = json_encode($fila["datos"]); // Convierte los datos de celdas en JSON
 
-if ($conn->query($sql) === true) {
-    echo "Horario guardado con éxito.";
-} else {
-    echo "Error al guardar el horario: " . $conn->error;
+    $sql = "INSERT INTO tabla_horario (hora, datos) VALUES ('$hora', '$datos')";
+
+    if ($conn->query($sql) !== TRUE) {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 }
 
 $conn->close();
