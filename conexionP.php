@@ -1,9 +1,9 @@
 <?php
 // Conectar a la base de datos
-$servername = "tu_servidor";
-$username = "tu_usuario";
-$password = "tu_contraseña";
-$dbname = "tu_base_de_datos";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "horarios_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -20,7 +20,7 @@ foreach ($data as $fila) {
     $hora = $fila["hora"];
     $datos = json_encode($fila["datos"]); // Convierte los datos de celdas en JSON
 
-    $sql = "INSERT INTO tabla_horario (hora, datos) VALUES ('$hora', '$datos')";
+    $sql = "INSERT INTO sexo (hora, datos) VALUES ('$hora', '$datos')";
 
     if ($conn->query($sql) !== TRUE) {
         echo "Error: " . $sql . "<br>" . $conn->error;
