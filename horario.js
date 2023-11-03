@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const selector = document.getElementById('selector');
     const horario = document.getElementById('horario');
 
-    // Función para crear filas de horas dentro de un intervalo específico
     function crearFilasDeHoras(inicio, fin) {
         for (let i = inicio; i <= fin; i++) {
             const fila = horario.insertRow(-1);
@@ -16,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Llamar a la función para crear filas de horas dentro de un intervalo específico
+
     crearFilasDeHoras(8, 19); // Ejemplo: crea filas desde las 8:00 AM hasta las 6:00 PM
 
-    // Función para cargar opciones desde un archivo CSV
+
     function cargarOpcionesDesdeCSV() {
         fetch('salas.csv')
             .then(response => response.text())
@@ -38,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Llamar a la función para cargar opciones desde CSV al cargar la página
+
     cargarOpcionesDesdeCSV();
 
-// Evento change en el selector para insertar selección en la tabla
+
 selector.addEventListener('change', function () {
     const seleccion = selector.value;
 
-    // Solicitar al usuario que elija una hora o un intervalo de horas y un día
+
     const horaInicio = parseInt(prompt('Elija la hora de inicio (8-20):'));
     const horaFin = parseInt(prompt('Elija la hora de fin (8-20):'));
     const diaSeleccionado = prompt('Elija un día (Lunes, Martes, Miércoles, Jueves, Viernes):');
@@ -53,7 +52,7 @@ selector.addEventListener('change', function () {
     // Convertir el día seleccionado a minúsculas
     const diaSeleccionadoLowerCase = diaSeleccionado.toLowerCase();
 
-    // Validar las horas ingresadas
+
     if (horaInicio >= 8 && horaInicio <= 20 && horaFin >= 8 && horaFin <= 20 && horaInicio <= horaFin) {
         // Validar el día ingresado (insensible a mayúsculas y minúsculas)
         const columnaDia = {
@@ -82,7 +81,7 @@ selector.addEventListener('change', function () {
         }[diaSeleccionadoLowerCase];
 
         if (columnaDia) {
-            // Llamar a la función para rellenar una sola hora con la selección
+
             rellenarHoraConSeleccion(horaInicio, columnaDia, seleccion);
         } else {
             alert('Día no válido. Asegúrese de que el día sea uno de los siguientes: Lunes, Martes, Miércoles, Jueves, Viernes.');
@@ -91,7 +90,7 @@ selector.addEventListener('change', function () {
         alert('Horas no válidas. Asegúrese de que la hora de inicio y la hora de fin estén entre 8 y 20, y que la hora de inicio sea anterior o igual a la hora de fin.');
     }
 });
-// Función para rellenar una sola hora con la selección
+
 function rellenarHoraConSeleccion(hora, columnaDia, seleccion) {
     const filaHora = horario.rows[hora - 8 + 1]; // +1 para ajustar por la fila de encabezados
     const celda = filaHora.cells[columnaDia];
@@ -100,7 +99,7 @@ function rellenarHoraConSeleccion(hora, columnaDia, seleccion) {
 
 
 
-    // Función para rellenar un intervalo de horas con la selección
+
     function rellenarIntervaloConSeleccion(inicio, fin, columnaDia, seleccion) {
         for (let i = inicio; i <= fin; i++) {
             const filaHora = horario.rows[i - 8 + 1]; // +1 para ajustar por la fila de encabezados
