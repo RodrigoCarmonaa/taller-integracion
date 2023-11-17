@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #278cca;
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+#page-header {
+    background-color: #278cca;
+    color: #fff;
+    height: 63px;
+    position: fixed;
+    top: 0; /* Establece una posición inicial en la parte superior */
+    width: 100%;
+    transition: top 0.3s; /* Agrega una transición suave para el deslizamiento */
+}
+
+
+.header-hidden {
+    top: -63px; /* Ocultar el encabezado desplazándolo hacia arriba */
+}
+
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    margin-right: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 23px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    background: #ffffff;
+}
+
+
+#calendar {
+    margin: 20px auto;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #278cca;
+    color: white;
+    user-select: none;
+}
+
+.calendar-day:hover {
+    background-color: #1864a4;
+}
+
+/* Estilo para el botón de cambio de mes */
+.month-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.prev-month, .next-month {
+    cursor: pointer;
+    color: #278cca;
+    font-weight: bold;
+}
+
+.prev-month:hover, .next-month:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el formulario de tareas */
+#task-input {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para la lista de tareas */
+#task-list {
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+#task-list h2 {
+    font-size: 40px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Estilo para las celdas de encabezado de la tabla */
+th {
+    background-color: #f2f2f2;
+}

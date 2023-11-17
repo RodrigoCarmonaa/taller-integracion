@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="horario.css">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="horario.js"></script>
+</head>
+<body>
+    <header> <div class="logo">
+        <a href="#">Logo</a> 
+    </div>
+    <nav class="menu" >
+        <a href="./index.html">Inicio</a>
+        <a href="./asistencia/Asistencia.html">Asistencia</a>
+        <a href="./calendario/calendario.php">Calendario Evaluaciones</a>
+        <a href="horario.html">Horario </a>
+        <a href="./materias/materias.php">Promedio Ponderado </a>
+    </nav></header>
+    <h1>Mi Horario Semanal</h1>
+<div class="tabla">
+    <table border="2" id="horario">
+        <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+
+    </table>
+    <label for="selector">Seleccione su curso:</label>
+    <select id="selector">
+</div>
+<form action="guardar_horario.php" method="post">
+    Nombre: <input type="text" name="nombre"><br>
+    Hora de inicio: <input type="time" name="hora_inicio"><br>
+    Hora de fin: <input type="time" name="hora_fin"><br>
+    Día de la semana: <input type="text" name="dia_semana"><br>
+    <input type="submit" value="Guardar Horario">
+</form>
+
+</body>
+</html>

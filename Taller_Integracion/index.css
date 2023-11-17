@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #278cca;
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+#page-header {
+    background-color: #278cca;
+    color: #fff;
+    height: 63px;
+    position: fixed;
+    top: 0; /* Establece una posición inicial en la parte superior */
+    width: 100%;
+    transition: top 0.3s; /* Agrega una transición suave para el deslizamiento */
+}
+
+
+.header-hidden {
+    top: -63px; /* Ocultar el encabezado desplazándolo hacia arriba */
+}
+
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    margin-right: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 23px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    background: #ffffff;
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url(imagen2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.inicio h2 {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.inicio p {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para títulos y párrafos */
+h2 {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #297077;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #000000;
+    padding: 0 100px;
+}
+
+/* Estilos para botones */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #278cca;
+    color: #fff;
+    text-decoration: none;
+    background: #278cca;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: none;
+    color: #278cca;
+}
+
+/*#################################################################################*/
+/*                       ESTILOS PARA EL PROYECTO                                  */
+/*#################################################################################*/
+.proyecto {
+    padding: 30px;
+}
+
+.texto_proyecto {
+    display: flex;
+    justify-content: center;
+}
+
+.texto_proyecto div {
+    height: 20rem;
+    width: 17rem;
+    background: #278cca;
+    border-radius: 1rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.texto_proyecto div h3 {
+    font-size: 20px;
+}
+
+.texto_proyecto div p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+/*#################################################################################*/
+/*                              PIE DE PAGINA                                      */
+/*#################################################################################*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1; /* Cambia el color de fondo según tu diseño */
+    color: #ffffff; /* Cambia el color de texto según tu diseño */
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.footer-column img {
+    width: 200%;
+    max-width: 200px; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.footer-column1 h4 {
+    color: #000000;
+    padding-top: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
+
+.footer-column1 p {
+    color:#000000;
+    font-size: medium;
+    padding-top: 30px;
+    display: flex;
+    line-height: 2.0;
+    
+    
+}
+.contact-info p {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-top: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item div {
+    color: #278cca; /* Cambia este valor al color deseado */
+
+}
