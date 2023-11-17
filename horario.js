@@ -51,8 +51,8 @@ selector.addEventListener('change', function () {
 
     // Convertir el día seleccionado a minúsculas
     const diaSeleccionadoLowerCase = diaSeleccionado.toLowerCase();
-
-
+    
+    
     if (horaInicio >= 8 && horaInicio <= 20 && horaFin >= 8 && horaFin <= 20 && horaInicio <= horaFin) {
         // Validar el día ingresado (insensible a mayúsculas y minúsculas)
         const columnaDia = {

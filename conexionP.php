@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "horarios_db";
+$dbname = "";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
