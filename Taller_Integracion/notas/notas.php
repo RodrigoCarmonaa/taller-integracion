@@ -7,7 +7,7 @@
     <title>Notas</title>
 </head>
 <body>
-    <h1>Notas</h1>
+    <h2>Notas</h2>
     <form action="agregarNota.php"> <!-- que, mostrarMateria.php no deberia estar aca??? que hace aca? -->
         <label for="nNotas">Numero de notas</label>
         <input type="number" name="nNotas" id="nNotas" placeholder="Numero de notas">
@@ -15,6 +15,6 @@
     </form>
     <div id="divNotas"></div>
     <!-- falta agregar el script que usa los porcentajes -->
-    <!-- <script src="notas2.js"></script> -->
+    <script src="notas2.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
     <h1>Materias</h1>
     <header id="page-header">
         <div class="logo">
-            <img src="logo catolica.png" alt="logo" width="140">
+            <img src="../imagenes/logo catolica.png" alt="logo" width="140">
         </div>
         <nav class="menu">
             <a href="../index.html">Inicio</a>
@@ -26,36 +26,36 @@
         <input type="submit" name="enviar" value="Agregar" id="btn_agregar">
     </form>
 
-    <!-- LAS MATERIAS EN EL SELECT DEBERIAN DECIR POR DEFECTO "SELECCIONE UNA MATERIA"
-    Y NO DEBERIA HABER NINGUN NOMBRE DE NINGUNA MATERIA!!!! -->
     <div id="divSelect">
         <select name="" id="selMateria">
-            <?php
-                include("mostrarMateria.php");
-            ?>
+            <option value="">Seleccione una materia</option>
+            <?php include("mostrarMateria.php"); ?>
         </select>
-        <div id="mostrarNotas">
-            <?php
-                // include("../notas/notas.php");
-            ?>
-        </div>
+        <div id="mostrarNotas"></div>
     </div>
 
 
     <!-- <script src="mostrarMateria.js"></script> -->
-    <!-- <script>
+    <script>
         // const btn_agregar = document.getElementById('btn_agregar')
-        // const divSelect = document.getElementById('divSelect')
         const selMateria = document.getElementById('selMateria')
         const mostrarNotas = document.getElementById('mostrarNotas')
 
-        selMateria.addEventListener('change', function(nomMateria){
-            fetch(`obtenerMateria.php`)
-            .then(respuesta => respuesta.text())
+        selMateria.addEventListener('change', function(){
+            fetch(`../notas/notas.php`)
+            .then(resp => resp.text())
             .then(data => {
                 mostrarNotas.innerHTML = data;
-            })
+            });
         })
-    </script> -->
+
+        // selMateria.addEventListener('change', function(){
+        //     fetch(`obtenerMateria.php?nombre=${selMateria.value}`)
+        //     .then(respuesta => respuesta.text())
+        //     .then(data => {
+        //         mostrarNotas.innerHTML = data;
+        //     });
+        // })
+    </script>
 </body>
 </html>
