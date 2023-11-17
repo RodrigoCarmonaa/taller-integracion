@@ -1,0 +1,102 @@
+/* Reset de estilos */
+body, h1, h3, p, textarea, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #00b4eb;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+#contenedor {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(86, 139, 169, 0.1);
+}
+
+#formulario {
+    margin-bottom: 20px;
+}
+
+.container--flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form_input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+#enviar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#enviar:hover {
+    background-color: #45a049;
+}
+
+#comentario {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#comentario h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#comentario b {
+    color: #007bff;
+}
