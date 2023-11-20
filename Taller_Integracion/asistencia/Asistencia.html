@@ -14,7 +14,7 @@
         <nav class="menu" >
             <a href="../index.html">Inicio</a>
             <a href="Asistencia.html">Asistencia</a>
-            <a href="../calendario/calendario.php">Calendario Evaluaciones</a>
+            <a href="../calendario/calendario.phpl">Calendario Evaluaciones</a>
             <a href="../horario/horario.html">Horario </a>
             <a href="../notas/materias.php">promedio ponderado </a>
         </nav>
@@ -22,22 +22,27 @@
 <body>
     <h1>Calculadora de Porcentaje de Asistencia</h1>
     <div class="calculator">
-        <label for="total">Total de Clases:</label>
-        <div class="counter">
-            <button id="decrementTotal">-</button>
-            <input type="number" id="total" value="0">
-            <button id="incrementTotal">+</button>
-        </div>
         <label for="attended">Clases Asistidas:</label>
-        <div class="counter">
-            <button id="decrementAttended">-</button>
-            <input type="number" id="attended" value="0">
-            <button id="incrementAttended">+</button>
-        </div>
-        <button id="calculate">Calcular</button>
-        <p id="result"></p>
+            <div class="counter input-container">
+                <span id="attended">0</span>
+                <button id="decrementAttended">-</button>            
+                <button id="incrementAttended">+</button>
+            </div>
+            <label for="total">Total de Clases:</label>
+            <div class="counter input-container">
+                <span id="total">0</span>
+                <button id="decrementTotal">-</button>   
+                <button id="incrementTotal">+</button>
+            </div>
+            <br>
+            <button id="calculate">Calcular</button>
+            <p id="result"></p>
     </div>
-    <script src="asistencia.js"></script>
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2023 Agenda Académica</p>
+    </footer>
+    <script src="Asistencia.js"></script>
     <script src="index.js"> </script>
 </body>
 </html>

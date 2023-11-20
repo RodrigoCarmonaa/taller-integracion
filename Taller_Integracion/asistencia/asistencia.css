@@ -12,9 +12,13 @@ body {
     padding: 0;
 }
 
-/* Estilos para el encabezado */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,23 +27,19 @@ header {
     z-index: 100;
 }
 
-
-
 #page-header {
     background-color: #278cca;
     color: #fff;
     height: 63px;
     position: fixed;
-    top: 0; /* Establece una posición inicial en la parte superior */
+    top: 0;
     width: 100%;
-    transition: top 0.3s; /* Agrega una transición suave para el deslizamiento */
+    transition: top 0.3s;
 }
-
 
 .header-hidden {
-    top: -63px; /* Ocultar el encabezado desplazándolo hacia arriba */
+    top: -63px;
 }
-
 
 .logo {
     margin-left: 30px;
@@ -68,4 +68,29 @@ header {
 
 .menu a:hover {
     background: #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #278cca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.calculator {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+footer {
+    
+    color: #010101;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior del contenedor */
 }
