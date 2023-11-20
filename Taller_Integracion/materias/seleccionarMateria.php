@@ -5,6 +5,6 @@
     $respuesta = mysqli_query($db, $sql);
 
     while ($fila = mysqli_fetch_object($respuesta)) {
-        echo"<li>$fila->nombre</li>";
+        echo"<option value='$fila->nombre'>$fila->nombre</option>";
     }
 ?>

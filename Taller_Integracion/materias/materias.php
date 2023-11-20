@@ -18,6 +18,7 @@
             <a href="../calendario/calendario.php">Calendario Evaluaciones</a>
             <a href="../horario/horario.html">Horario </a>
             <a href="materias.php">Materias</a>
+            <a href="../notas/notas.php">Notas</a>
         </nav>
     </header>
     <form method="get" action="agregarMateria.php" class="calculator">
@@ -26,36 +27,8 @@
         <input type="submit" name="enviar" value="Agregar" id="btn_agregar">
     </form>
 
-    <div id="divSelect">
-        <select name="" id="selMateria">
-            <option value="">Seleccione una materia</option>
-            <?php include("mostrarMateria.php"); ?>
-        </select>
-        <div id="mostrarNotas"></div>
-    </div>
+    <ul id="nuevaMateria"></ul>
 
-
-    <!-- <script src="mostrarMateria.js"></script> -->
-    <script>
-        // const btn_agregar = document.getElementById('btn_agregar')
-        const selMateria = document.getElementById('selMateria')
-        const mostrarNotas = document.getElementById('mostrarNotas')
-
-        selMateria.addEventListener('change', function(){
-            fetch(`../notas/notas.php`)
-            .then(resp => resp.text())
-            .then(data => {
-                mostrarNotas.innerHTML = data;
-            });
-        })
-
-        // selMateria.addEventListener('change', function(){
-        //     fetch(`obtenerMateria.php?nombre=${selMateria.value}`)
-        //     .then(respuesta => respuesta.text())
-        //     .then(data => {
-        //         mostrarNotas.innerHTML = data;
-        //     });
-        // })
-    </script>
+    <script src="mostrarMateria.js"></script>
 </body>
 </html>
